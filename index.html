@@ -5,6 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>hot Exclusive</title>
 
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)}
+;if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '927308403453372');
+fbq('track', 'PageView');
+</script>
+
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=927308403453372&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Meta Pixel Code -->
+
 <style>
 body{margin:0;font-family:Arial;background:#f3f3f3;}
 .top{background:#00a8cc;color:white;text-align:center;padding:12px;font-weight:bold;}
@@ -124,14 +145,12 @@ Leiaitslove • Hot Exclusive 🇲🇿 PROMOÇÃO EXCLUSIVA
 Conteúdo exclusivo todos os dias 🔥
 </div>
 
-<!-- BOTÃO VIP -->
 <div class="cta" onclick="checkout199()">
 👑 QUERO SER MEMBRO VIP
 </div>
-
 </div>
 
-<!-- POST 1 -->
+<!-- POSTS -->
 <div class="post">
 <div class="post-header">
 <img src="https://i.postimg.cc/yNGwyP3m/IMG-1505.jpg" class="avatar">
@@ -150,40 +169,6 @@ Vem ter uma vídeo chamada comigo 🔥
 <div class="lock">
 <div class="lock-icon">🔒</div>
 <div class="lock-text">Conteúdo Exclusivo</div>
-</div>
-
-<div class="actions">
-<div>❤️ 723</div>
-<div>💬 201</div>
-<div>🔗</div>
-</div>
-</div>
-
-<!-- POST 2 -->
-<div class="post">
-<div class=aa "post-header">
-<img src="https://i.postimg.cc/yNGwyP3m/IMG-1505.jpg"class="avatar">
-<div class="post-info">
-<b>Leiaitslove 🍑💦🍆</b><br>
-<span style="color:#777;font-size:12px;">5h</span>
-</div>
-</div>
-
-<div class="post-text">
-Conteúdo novo só para VIP 👑🔥
-</div>
-
-<div class="post-img" style="background:url('https://i.postimg.cc/CMnm804n/IMG-1507.jpg');"></div>
-
-<div class="lock">
-<div class="lock-icon">🔒</div>
-<div class="lock-text">Desbloqueie abaixo</div>
-</div>
-
-<div class="actions">
-<div>❤️ 1.2K</div>
-<div>💬 340</div>
-<div>🔗</div>
 </div>
 </div>
 
@@ -206,22 +191,10 @@ Conteúdo novo só para VIP 👑🔥
 <p style="color:#777;">✔ Pagamento seguro</p>
 </div>
 
-<!-- FAQ -->
-<div class="faq">
-<div onclick="toggle(this)" class="faq-item"><span>É sigiloso?</span><span>▼</span></div>
-<div class="resposta">Sim, totalmente privado.</div>
-
-<div onclick="toggle(this)" class="faq-item"><span>Quando tenho acesso?</span><span>▼</span></div>
-<div class="resposta">Imediato após pagamento.</div>
-</div>
-
 <!-- BOTÃO FIXO -->
 <div class="fixed" onclick="checkout199()">
 Veja tudo por 199 MZN →
 </div>
-
-<!-- NOTIFICAÇÕES -->
-<div id="notif" style="position:fixed;bottom:90px;left:10px;background:white;padding:10px;border-radius:10px;display:none;"></div>
 
 <!-- AGE GATE -->
 <div id="ageGate" style="position:fixed;top:0;left:0;width:100%;height:100%;background:#0b1c2c;display:flex;align-items:center;justify-content:center;z-index:99999;">
@@ -234,34 +207,15 @@ Veja tudo por 199 MZN →
 
 <script>
 function checkout199(){
+fbq('track', 'InitiateCheckout');
 window.location.href="https://pay.kambafy.com/checkout/c44143af-8135-4e46-9015-29b89003cadd";
 }
 
 function checkout297(){
+fbq('track', 'InitiateCheckout');
 window.location.href="https://pay.kambafy.com/checkout/60d2fc62-1fc1-44f4-a850-af8e0abe1433";
 }
 
-function toggle(el){
-let r = el.nextElementSibling;
-r.style.display = r.style.display === "block" ? "none" : "block";
-}
-
-// notificações
-const nomes=["João","Carlos","Mário","Nelson","Paulo"];
-const cidades=["Maputo","Beira","Nampula","Tete","Matola"];
-
-setInterval(()=>{
-let n=nomes[Math.floor(Math.random()*nomes.length)];
-let c=cidades[Math.floor(Math.random()*cidades.length)];
-let notif=document.getElementById("notif");
-
-notif.innerHTML="🔥 "+n+" de "+c+" entrou no VIP";
-notif.style.display="block";
-
-setTimeout(()=>notif.style.display="none",3000);
-},6000);
-
-// age gate
 document.body.style.overflow="hidden";
 
 function entrar(){
